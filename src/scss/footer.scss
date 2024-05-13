@@ -1,4 +1,4 @@
-@import './mixins/breakpoint';
+@import "./mixins/breakpoint";
 
 .footer {
     display: flex;
@@ -20,7 +20,11 @@
         align-items: flex-start;
         gap: 80px;
         align-self: stretch;
-        color: var(--Neutral-10, var(--GlobalColors-Neutral-0, #FFF));
+        color: var(--Neutral-10, var(--GlobalColors-Neutral-0, #fff));
+
+        @include small-tablet {
+            gap: 72px;
+        }
     }
 
     &Content01 {
@@ -29,7 +33,6 @@
         align-items: flex-end;
         align-self: stretch;
     }
-
 
     &Content01Text {
         display: flex;
@@ -41,6 +44,20 @@
 
     &Content01Text .content-button {
         display: none;
+    }
+
+    &Line {
+        background: #404145;
+        width: 100%;
+        height: 1px;
+
+        @include small-tablet {
+            display: flex;
+        }
+    }
+
+    &LineTwo {
+        
     }
 }
 
@@ -57,12 +74,6 @@
     font-size: 32px;
 }
 
-.footer-line {
-    background: #404145;
-    width: 100%;
-    height: 1px;
-}
-
 .footer-content02 {
     display: flex;
     justify-content: space-between;
@@ -76,8 +87,6 @@
     gap: 112px;
 }
 
-
-
 .footer-navMenu ul {
     display: flex;
     flex-direction: column;
@@ -90,12 +99,10 @@
 
 .footer-navMenu a {
     text-decoration: none;
-    color: var(--Neutral-10, var(--GlobalColors-Neutral-0, #FFF));
+    color: var(--Neutral-10, var(--GlobalColors-Neutral-0, #fff));
     font-size: 24px;
     font-weight: 500;
-
 }
-
 
 .footer-content02-contact {
     display: flex;
@@ -121,12 +128,10 @@
 
 .navMenu-social a {
     text-decoration: none;
-    color: var(--Neutral-10, var(--GlobalColors-Neutral-0, #FFF));
+    color: var(--Neutral-10, var(--GlobalColors-Neutral-0, #fff));
     font-size: 24px;
     font-weight: 500;
 }
-
-
 
 .navMenu-contact ul {
     display: flex;
@@ -141,10 +146,9 @@
 
 .navMenu-contact a {
     text-decoration-line: underline;
-    color: var(--Neutral-10, var(--GlobalColors-Neutral-0, #FFF));
+    color: var(--Neutral-10, var(--GlobalColors-Neutral-0, #fff));
     font-size: 24px;
     font-weight: 500;
-
 }
 
 #line2-footer {
@@ -155,18 +159,7 @@
     display: none;
 }
 
-
 @media screen and (max-width: 720px) {
-
-
-    .footer-line {
-        display: flex;
-    }
-
-    .footer-container {
-        gap: 72px;
-    }
-
     .footer-content01 {
         gap: 40px;
         flex-direction: column;
