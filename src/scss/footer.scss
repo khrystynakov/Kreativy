@@ -1,0 +1,247 @@
+@import './mixins/breakpoint';
+
+.footer {
+    display: flex;
+    padding: 80px 48px 48px 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    background: var(--Neutral-100, #010202);
+
+    @include small-tablet {
+        padding: 48px 24px;
+        gap: 0;
+    }
+
+    &Container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 80px;
+        align-self: stretch;
+        color: var(--Neutral-10, var(--GlobalColors-Neutral-0, #FFF));
+    }
+
+    &Content01 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        align-self: stretch;
+    }
+
+
+    &Content01Text {
+        display: flex;
+        width: 619px;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 32px;
+    }
+
+    &Content01Text .content-button {
+        display: none;
+    }
+}
+
+.footer-content01-text h1 {
+    font-size: 136px;
+    line-height: 100%;
+    letter-spacing: -5.44px;
+    margin: 0;
+}
+
+.footer-content01-text p {
+    margin: 0;
+    align-self: stretch;
+    font-size: 32px;
+}
+
+.footer-line {
+    background: #404145;
+    width: 100%;
+    height: 1px;
+}
+
+.footer-content02 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.footer-content02-about {
+    display: flex;
+    align-items: flex-start;
+    gap: 112px;
+}
+
+
+
+.footer-navMenu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-navMenu a {
+    text-decoration: none;
+    color: var(--Neutral-10, var(--GlobalColors-Neutral-0, #FFF));
+    font-size: 24px;
+    font-weight: 500;
+
+}
+
+
+.footer-content02-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 64px;
+}
+
+.navMenu-social {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.navMenu-social ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+}
+
+.navMenu-social a {
+    text-decoration: none;
+    color: var(--Neutral-10, var(--GlobalColors-Neutral-0, #FFF));
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+
+.navMenu-contact ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    text-align: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navMenu-contact a {
+    text-decoration-line: underline;
+    color: var(--Neutral-10, var(--GlobalColors-Neutral-0, #FFF));
+    font-size: 24px;
+    font-weight: 500;
+
+}
+
+#line2-footer {
+    display: none;
+}
+
+#line1-footer {
+    display: none;
+}
+
+
+@media screen and (max-width: 720px) {
+
+
+    .footer-line {
+        display: flex;
+    }
+
+    .footer-container {
+        gap: 72px;
+    }
+
+    .footer-content01 {
+        gap: 40px;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .footer-content01-text {
+        gap: 16px;
+        justify-content: flex-end;
+        width: 100%;
+        align-items: normal;
+    }
+
+    .footer-content01-text h1 {
+        font-size: 64px;
+        letter-spacing: 0.64px;
+    }
+
+    .footer-content01-text p {
+        font-size: 24px;
+    }
+
+    .footer-content01-text .content-button {
+        display: flex;
+    }
+
+    .content-button {
+        display: none;
+    }
+
+    .footer-content02 {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #line0-footer {
+        display: none;
+    }
+
+    #line2-footer {
+        display: flex;
+    }
+
+    #line1-footer {
+        display: flex;
+    }
+
+    .footer-content02-about {
+        gap: 80px;
+    }
+
+    .footer-navMenu a {
+        font-size: 18px;
+    }
+
+    .navMenu-social a {
+        font-size: 18px;
+    }
+
+    .footer-content02-contact {
+        align-items: flex-start;
+    }
+
+    .navMenu-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .navMenu-contact a {
+        font-size: 18px;
+    }
+
+    .navMenu-contact ul {
+        align-items: flex-start;
+    }
+}

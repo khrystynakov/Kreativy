@@ -1,0 +1,10 @@
+@mixin font-face($font-family, $font-path, $font-weight, $font-style) {
+    @font-face {
+      font-family: $font-family;
+      src: url('#{$font-path}') format('woff2');
+      font-weight: $font-weight;
+      font-style: $font-style;
+    }
+  }
+
+@include font-face("UncutSans", "./fonts/UncutSans-Regular.woff2", 400, normal);
